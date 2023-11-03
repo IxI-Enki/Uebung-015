@@ -34,6 +34,10 @@ Der abschließende Kommentar sollte von folgenden Faktoren abhängen:
 ## . . . . . . . . . .... [SPOILER] .... . . . . . . . . 
 
 ## Visual Studio
+![vs1](https://github.com/IxI-Enki/Uebung-015/assets/138018029/855714f7-59c5-4f94-ab64-f431ae70626e)
+![vs2](https://github.com/IxI-Enki/Uebung-015/assets/138018029/038a43b7-ffa4-4054-b31d-799e4e93c890)
+![vs3](https://github.com/IxI-Enki/Uebung-015/assets/138018029/499731c7-2343-4efc-9683-b0edc27671dc)
 
 ## Ausgabe
+![a](https://github.com/IxI-Enki/Uebung-015/assets/138018029/c7a388b6-05e0-4039-882b-60255f5f19e4)
 
