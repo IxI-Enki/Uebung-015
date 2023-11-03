@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="33E89B6FFB6658DD">
+  <PROJECT FORMAT="1.00" NAME="FuelCalculator" AUTHOR="Jan Ritt" CREATED="2023.11.02 17:02:58" MODIFIED="2023.11.02 17:39:49">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="FuelCalculator" CREATED="2023.11.02 17:03:06" MODIFIED="2023.11.02 17:39:49">
+        <LAYOUT FORMAT="1.00" COLUMNS="8" ROWS="22">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="17">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="148">
+                <TEXT><![CDATA[Ausgabe von "Normalbereich"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="19">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="209">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="18">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="151">
+                <TEXT><![CDATA[Ausgabe von "Hoher Verbrauch"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="19">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="206">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="15">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="140">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="16">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="116">
+                <TEXT><![CDATA[averageConsumption <6]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="17">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="124">
+                <TEXT><![CDATA[averageConsumption >=6 & <=7]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="18">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="135">
+                <TEXT><![CDATA[averageConsumption >7]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[FuelCalculator]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="2">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Eingabe von fuelType]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="3">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[fuelType != "Benzin" & fuelType != "Diesel"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="4">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="11">
+                <TEXT><![CDATA[IF abort=false]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="5">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="13">
+                <TEXT><![CDATA[Eingabe von km]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="6">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[TryParse km]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="7">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="34">
+                <TEXT><![CDATA[IF km <= 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="52">
+                <TEXT><![CDATA[IF abort=false]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="9">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="40">
+                <TEXT><![CDATA[Eingabe von gasolineAmount]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="10">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="42">
+                <TEXT><![CDATA[TryParse gasolineAmount]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="11">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="43">
+                <TEXT><![CDATA[IF gasolineAmount <= 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="65">
+                <TEXT><![CDATA[IF abort = false]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="67">
+                <TEXT><![CDATA[averageConsumption = gasolineAmount/km * 100]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="14">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="69">
+                <TEXT><![CDATA[Ausgabe von formatierter averageConsumption]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="15">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="107">
+                <TEXT><![CDATA[fuelType ?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="16">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="111">
+                <TEXT><![CDATA[Ausgabe von "sparames Auto"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="19">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="203">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="20">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="215">
+                <TEXT><![CDATA["Weiter mit beliebiger Taste"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="21">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="15">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="143">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="16">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="114">
+                <TEXT><![CDATA[averageConsumption <5]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="17">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="123">
+                <TEXT><![CDATA[averageConsumption >=5 & <=6]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="18">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="134">
+                <TEXT><![CDATA[averageConsumption >6]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="18">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="172">
+                <TEXT><![CDATA[Ausgabe von "Hoher Verbrauch"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="19">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="197">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="17">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="169">
+                <TEXT><![CDATA[Ausgabe von "Normalbereich"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="19">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="195">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="3">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="104">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="4">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="94">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="6">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="91">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="88">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="8">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="85">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="82">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="79">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="12">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="77">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="102">
+                <TEXT><![CDATA[abort = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="14">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="217">
+                <TEXT><![CDATA[Ausgabe von "Ungültige Eingabe"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="19">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="212">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="11" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="66" FROM="65" TO="67" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="12" FROM="11" TO="13" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="21" FROM="20" TO="34" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="106" FROM="104" TO="94" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="14" FROM="13" TO="20" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="145" FROM="143" TO="114" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="141" FROM="107" TO="140" TEXT="Benzin" />
+          <CONNECTION FORMAT="1.00" ID="35" FROM="34" TO="52" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="53" FROM="52" TO="40" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="41" FROM="40" TO="42" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="144" FROM="107" TO="143" TEXT="Diesel" />
+          <CONNECTION FORMAT="1.00" ID="47" FROM="42" TO="43" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="68" FROM="67" TO="69" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="120" FROM="116" TO="124" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="50" FROM="43" TO="65" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="70" FROM="69" TO="107" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="49" FROM="43" TO="79" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="87" FROM="85" TO="82" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="96" FROM="94" TO="91" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="72" FROM="65" TO="77" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="81" FROM="79" TO="77" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="46" FROM="42" TO="82" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="84" FROM="82" TO="79" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="74" FROM="52" TO="85" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="36" FROM="34" TO="88" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="90" FROM="88" TO="85" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="30" FROM="20" TO="91" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="93" FROM="91" TO="88" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="76" FROM="11" TO="94" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="142" FROM="140" TO="116" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="105" FROM="6" TO="104" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="101" FROM="77" TO="102" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="122" FROM="114" TO="123" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="170" FROM="123" TO="169" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="174" FROM="135" TO="151" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="130" FROM="123" TO="134" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="132" FROM="124" TO="135" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="171" FROM="124" TO="148" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="180" FROM="151" TO="206" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="146" FROM="116" TO="111" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="147" FROM="114" TO="111" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="173" FROM="134" TO="172" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="178" FROM="172" TO="197" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="214" FROM="212" TO="195" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="200" FROM="203" TO="215" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="176" FROM="169" TO="195" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="211" FROM="209" TO="206" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="182" FROM="148" TO="209" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="208" FROM="206" TO="203" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="202" FROM="195" TO="197" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="187" FROM="111" TO="203" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="201" FROM="197" TO="203" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="158" FROM="102" TO="217" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="216" FROM="215" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="218" FROM="217" TO="212" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>
